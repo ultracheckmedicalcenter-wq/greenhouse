@@ -1,11 +1,11 @@
 <?php
 // config.php
 // Edit DB credentials
-$dbHost = 'mysql.railway.internal';
-$dbName = 'railway';
-$dbUser = 'root';
-$dbPass = 'zAIWJWDxKRFYrOoOPDwRVLTrJvjJxNKA';
-$port = '3306';
+$host = getenv('DB_HOST');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$dbname = getenv('DB_NAME');
+$port = getenv('DB_PORT');
 
 $conn = new mysqli($host, $user, $pass, $dbname, $port);
 // $dsn = "mysql:host={$dbHost};dbname={$dbName};charset=utf8mb4";
